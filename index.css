@@ -1,0 +1,392 @@
+/* RESET */
+body {
+  margin: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+/*---------------- HEADER ----------------*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+/* Contenedor general del header */
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/*----------- IZQUIERDA -----------*/
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+.barras {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.barras div {
+  width: 20px;
+  height: 2px;
+  background: black;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+/*----------- CENTRO (BUSCADOR) -----------*/
+.buscador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  max-width: 600px;
+  margin: 0 20px;
+}
+
+.buscar {
+  flex: 1;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 40px 0 0 40px;
+  padding: 0 12px;
+  font-size: 16px;
+  outline: none;
+}
+
+.buscar::placeholder {
+  color: #666;
+}
+
+.lupa {
+  width: 64px;
+  height: 40px;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 40px 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lupa img {
+  height: 20px;
+}
+
+.micro {
+  width: 40px;
+  height: 40px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.micro img {
+  height: 30px;
+}
+
+/* Hover */
+.lupa:hover,
+.micro:hover {
+  background-color: #e6e6e6;
+}
+
+/*----------- DERECHA -----------*/
+.usuario {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+
+}
+
+.usuario img {
+  height: 28px;
+  width: 28px;
+  object-fit: contain;
+  cursor: pointer;
+}
+/* Estilo YouTube */
+.boton-crear {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background-color: #f2f2f2; 
+    color: #000;
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    box-sizing: border-box;
+}
+
+/* Hover como la resta */
+.boton-crear:hover {
+    background-color: #e6e6e6;
+}
+
+.icono-mas {
+    position: relative;
+    width: 14px;
+    height: 14px;
+}
+
+/* Dos líneas cruzadas */
+.icono-mas::before,
+.icono-mas::after {
+    content: "";
+    position: absolute;
+    background-color: #000;
+    border-radius: 2px;
+}
+
+/* Línea vertical */
+.icono-mas::before {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+}
+
+/* Línea horizontal */
+.icono-mas::after {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 2px;
+}
+
+.perfil img {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+}
+
+/*---------------- COLUMNA (SIDEBAR) ----------------*/
+.columna {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  width: 204px;
+  height: calc(100% - 56px);
+  background: #fff;
+  overflow-y: auto;
+  border-right: 1px solid #ddd;
+  padding-left: 20px;
+
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.flex:hover {
+  background-color: #f2f2f2;
+}
+
+.contenidor_img img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.txt {
+  font-size: 14px;
+}
+
+.linea {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 10px 0;
+}
+
+/*---------------- RESPONSIVE ----------------*/
+@media (max-width: 768px) {
+  .buscar {
+    width: 100%;
+  }
+  .columna {
+    width: 72px;
+  }
+  .txt {
+    display: none;
+  }
+}
+
+/*-------- PIE DE COLUMNA --------*/
+.apartat6 {
+  font-size: 13px;
+  color: #aaa;
+  padding: 16px 8px 40px;
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #aaa;
+  text-decoration: none;
+  margin-right: 8px;
+
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: #666;
+  margin-top: 8px;
+}
+
+/*---------------- CUERPO (VIDEOS) ----------------*/
+
+
+/*---------------- Fila de categorias-*/
+
+.categorias {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 12px 0;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  scrollbar-width: none; /* Firefox */
+}
+
+.categorias::-webkit-scrollbar {
+    display: none; /* Chrome, Edge, Safari */
+}
+
+.categoria {
+  background-color: #f2f2f2;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0; /* evita que se encojan */
+}
+
+.categoria:hover {
+  background-color: #e5e5e5;
+}
+
+.categoria.activa {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* Cuerpo general */
+.contenido {
+  margin-left: 220px; /* deja espacio para la barra lateral */
+  padding: 80px 20px 20px 20px;
+  background-color: #fff;
+}
+
+/* Fila de 3 videos */
+.fila-videos {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 24px;
+}
+
+/* Cada video */
+.video {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+/* Miniatura */
+
+.miniatura img{
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-color: #ddd; /* gris para simular imagen */
+  border-radius: 10px;
+}
+
+/* Información del video */
+.info-video {
+  display: flex;
+  margin-top: 10px;
+}
+
+/* Icono del canal */
+.canal img {
+  max-width: 100%;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #ccc;
+}
+
+/* Texto */
+.texto {
+  margin-left: 10px;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+.titulo {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 0 4px 0;
+  color: #000;
+}
+
+.canal-nombre, .vistas-tiempo {
+  font-size: 12px;
+  color: #606060;
+  margin: 0;
+}
