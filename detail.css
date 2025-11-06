@@ -1,0 +1,640 @@
+/*---------------- HEADER ----------------*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+/* Contenedor general del header */
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/*----------- IZQUIERDA -----------*/
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+.barras {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.barras div {
+  width: 20px;
+  height: 2px;
+  background: black;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+/*----------- CENTRO (BUSCADOR) -----------*/
+.buscador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  max-width: 600px;
+  margin: 0 20px;
+}
+
+.buscar {
+  flex: 1;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 40px 0 0 40px;
+  padding: 0 12px;
+  font-size: 16px;
+  outline: none;
+}
+
+.buscar::placeholder {
+  color: #666;
+}
+
+.lupa {
+  width: 64px;
+  height: 40px;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 40px 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lupa img {
+  height: 20px;
+}
+
+.micro {
+  width: 40px;
+  height: 40px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.micro img {
+  height: 30px;
+}
+
+/* Hover */
+.lupa:hover,
+.micro:hover {
+  background-color: #e6e6e6;
+}
+
+/*----------- DERECHA -----------*/
+.usuario {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+
+}
+
+.usuario img {
+  height: 28px;
+  width: 28px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/*----------- GENERAL -----------*/
+body {
+    margin: 0;
+    font-family: "Roboto", "Arial", sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+/* --- Contenedor principal --- */
+.contenedor-video {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 80px;
+    padding: 0 40px;
+}
+
+/* --- Columna izquierda (video principal) --- */
+.columna1 {
+    flex: 2.5;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Reproductor */
+.reproductor img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* --- Título e info --- */
+.titulo-video {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 16px 0 8px;
+}
+
+.info-video p {
+    font-size: 14px;
+    color: #606060;
+    margin: 0 0 16px 0;
+}
+
+.canal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px;
+  flex-wrap: nowrap;
+}
+
+.canal div{
+  margin-left: 10px;
+}
+
+.canal img {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+
+.canal-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  line-height: 1.2;
+}
+
+.canal-info h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f0f0f;
+  line-height: 1.1; 
+}
+
+.canal-info p {
+  font-size: 13px;
+  color: #606060;
+  line-height: 1.1; 
+}
+
+.btn-suscribir {
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 20px;
+}
+
+.btn-suscribir:hover {
+  background-color: #333;
+}
+
+.acciones-video {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.botones-reaccion {
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  padding: 6px 10px;
+  gap: 6px;
+}
+
+.btn-like, .btn-dislike, .btn-accion {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+  border-radius: 20px;
+  padding: 6px 12px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-like:hover, .btn-dislike:hover, .btn-accion:hover {
+  background-color: #e8e8e8;
+}
+
+.like-count {
+  font-size: 14px;
+}
+
+
+/* --- Descripción corta --- */
+.descripcion {
+    background-color: #f2f2f2;
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #000;
+}
+
+/* --- Columna derecha (sugeridos) --- */
+.columna2 {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.video-sugerido {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.video-sugerido img {
+    width: 168px;
+    height: 94px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.video-sugerido .texto {
+    flex: 1;
+}
+
+.titulo-sugerido {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    color: #000;
+}
+
+.canal-sugerido,
+.info-sugerido {
+    font-size: 12px;
+    color: #606060;
+    margin: 2px 0;
+}
+
+/* --- Descripción expandida --- */
+.descripcion-expandida {
+    background-color: #f2f2f2;
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.descripcion-expandida p {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.descripcion-expandida a {
+    color: #065fd4;
+    text-decoration: none;
+}
+
+.descripcion-expandida a:hover {
+    text-decoration: underline;
+}
+
+.transcripcion h4 {
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.btn-transcripcion {
+    margin-top: 8px;
+    background-color: #065fd4;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 14px;
+    cursor: pointer;
+}
+
+.btn-transcripcion:hover {
+    background-color: #004ba0;
+}
+
+.canal-info {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 16px;
+}
+
+.canal-detalle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.canal-foto {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.canal-botones {
+    margin-top: 12px;
+    display: flex;
+    gap: 8px;
+}
+
+.canal-botones button {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.canal-botones button:hover {
+    background-color: #eee;
+}
+
+.btn-menos {
+    margin-top: 12px;
+    background: none;
+    border: none;
+    color: #065fd4;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* --- Responsivo --- */
+@media (max-width: 1000px) {
+    .contenedor-video {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .columna2 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .video-sugerido {
+        width: 48%;
+    }
+}
+/* --- Botones de acciones (like, compartir, etc.) --- */
+.acciones-video {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Caja general de los likes */
+.botones-reaccion {
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+/* Botones dentro de la caja */
+.btn-like,
+.btn-dislike {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: #000;
+  padding: 8px 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Íconos SVG */
+.btn-like svg,
+.btn-dislike svg {
+  width: 18px;
+  height: 18px;
+  fill: #000;
+}
+
+/* Efecto hover */
+.btn-like:hover,
+.btn-dislike:hover {
+  background-color: #e5e5e5;
+}
+
+/* Línea divisoria entre los dos botones */
+.btn-dislike {
+  border-left: 1px solid #ccc;
+}
+
+/* Contador */
+.like-count {
+  font-size: 14px;
+}
+
+/* Botones extra (Compartir, Descargar, Gracias, etc.) */
+.btn-accion {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 14px;
+  color: #000;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+/* Imágenes de botones */
+.btn-accion img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* Hover para los botones secundarios */
+.btn-accion:hover {
+  background-color: #e6e6e6;
+}
+
+/* ==== COMENTARIOS ==== */
+.comentarios {
+  margin-top: 32px;
+  color: #0f0f0f;
+  font-family: 'Roboto', sans-serif;
+}
+
+.comentarios-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.comentarios-header h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.ordenar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: #0f0f0f;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.ordenar img {
+  width: 18px;
+  height: 18px;
+}
+
+.nuevo-comentario {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.perfil-comentario {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.input-comentario {
+  flex: 1;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.input-comentario::placeholder {
+  color: #606060;
+}
+
+.comentario {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.contenido-comentario {
+  flex: 1;
+}
+
+.usuario {
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0;
+}
+
+.usuario .tiempo {
+  color: #606060;
+  font-weight: 400;
+}
+
+.texto {
+  font-size: 14px;
+  margin: 4px 0 8px;
+}
+
+.acciones-comentario {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.btn-like, .btn-dislike {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.btn-like img, .btn-dislike img {
+  width: 16px;
+  height: 16px;
+}
+
+.btn-like span {
+  font-size: 13px;
+  color: #0f0f0f;
+}
+
+.responder {
+  border: none;
+  background: none;
+  color: #065fd4;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.responder:hover {
+  text-decoration: underline;
+}
+
+.ver-respuestas {
+  margin-top: 6px;
+  background: none;
+  border: none;
+  color: #065fd4;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+}
